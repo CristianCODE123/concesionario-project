@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:ital,wght@0,400;0,700;0,900;1,500&display=swap');
+
+*{
+    font-family: roboto;
+    margin: 0;
+}
+
+li{
+    margin-left: -5px;
+}
+.primary-nav{
+    margin-top: -1.5em;
+    margin-left: 37%;
+    
+}
+.navbar{
+    height: 63px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: .1em;
+    background-color: white;
+    border: 0px solid #999 ;
+    box-shadow: 1px 1px 3px #999;
+    white-space: nowrap; 
+    .logo{
+       margin-left: -2%;
+        text-decoration: none;
+        font-family : Roboto;
+        font-weight : bold;
+        font-size : 23px;
+        color : #196CDA;
+        color : rgb(25, 108, 218);
+        span{
+            color:black;
+        }
+    }
+    nav{
+        //display: none;
+    }
+    
+    .container{
+        place-content: space-between;
+        display: flex;
+    }
+    
+        .menu{
+            padding: .5em;
+            width: 40px;
+            height: 40px;
+           cursor: pointer;
+           
+        }
+        
+    }
+
+   
+
+    // aqui estamos configurando el menu desplegable
+    @media only screen and(max-width:760px){
+        .visible{
+            visibility: visible;
+        }
+        .hidden{
+            visibility:hidden;
+        }
+        .menu{
+           margin-left: 50%;
+        }
+        .exit{
+            margin-top: 1em;
+            cursor: pointer;
+        }
+        nav {
+            display: none;
+            margin-top: -1.7em;
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: #2f3640;
+            top: 80px;
+            left: 0;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 25px;
+                &:hover{
+                    color: gray;
+                }
+            }
+            li{
+                margin-right: 2.5em;
+                margin-top: 4em;
+                list-style: none;
+                padding-bottom: 3ex;
+            }
+        }
+        .primary-nav{
+            margin-left: -.7em;
+        }
+        nav.menu-btn{
+            display: block;
+        }
+    }
+
+
+    @media only screen and(min-width:760px){
+        
+        .parrafo-logo{
+            display: flex;
+            margin-left: 53%;
+        }
+        .navbar .container{
+            display: grid;
+            grid-template-columns: 180px auto;
+            justify-content: unset;
+        }
+        .img-cuerpo{
+            height: 380px;
+        }
+        .menu{
+            display: none;
+        }
+        .navbar nav{
+        margin-left: 20%;
+        display: flex;
+        justify-content: space-between;
+        background: none;
+        position: unset;
+        height: auto;
+        width: 100%;
+        padding: 0;
+        margin-right: 10em;
+        ul{
+            display: flex;
+            list-style:none;
+            
+        }
+        
+        a{
+            
+            color: rgb(102, 102, 102);
+            font-size: 1em;
+            padding: .1em 1em;
+            text-decoration: none;
+            &:hover{
+                color: black;
+                font-weight: bold;
+        }
+        }
+       }
+    }
+
+    @media only screen and(min-width:1300px){
+        .logo{
+            margin-left: 7em;
+        }
+        .parrafo-logo{
+            display: flex;
+            margin-left: 55em;
+        }
+        .left-col{
+            h1{
+                margin-top: 6em;
+                text-align: left;
+                margin-left: 9%;
+            }
+            p{
+                margin-top: -2em;
+                text-align: left;
+                margin-left: 10%; 
+            }
+            .btn-registro{
+                margin-top: 2em;
+                
+                margin-left: 8%; 
+            }
+            .btn-detalles{
+                margin-top: -8.2em;
+                
+                margin-left: 23%; 
+            }
+        }
+        .img-cuerpo{
+            margin-top: -25em;
+            width: 600px;
+            height: 400px;
+            margin-left: 50%; 
+            display: flex;
+        }
+        .socialMedia-list{
+            left: 100px;
+            right: 0;
+        }
+
+    }
+
+    @media only screen and(min-width:1600px){
+.contact-rigth{
+    margin-top: -40px;
+    margin-left: -100px;
+}
+       .left-col h1{
+        margin-left: 210px;
+    }
+    .left-col p{
+        margin-left: 220px;
+    }
+        .img-cuerpo{
+        margin-top: -25em;
+        width: 600px;
+        height: 400px;
+   
+    
+    }
+    .container .socialMedia-list{
+        margin-left: 97em;
+        margin-top: 15em;
+    }
+    .socialMedia-list{
+        display: flex;
+        
+    }
+    .left-col{
+        margin-left: 5em;
+        .btn-detalles{
+            margin-left: 400px;
+            cursor: pointer;
+        }
+        .btn-registro{
+            margin-left: 190px;
+            cursor: pointer;
+        }
+    }
+.primary-nav{
+    a{
+        margin-left: 50px;
+        
+    }
+    li{
+        padding-bottom: 1ex;
+    }
+}
+
+    }
+
+    .options{
+        display: flex;
+        margin-left: 20%;
+        margin-top: 5em;
+        
+    }
+
+    .options div{
+        margin: 10px;
+        input{
+           margin-left: 37em;
+        }
+    }
+
+    .flex-container{
+        
+        img{
+            width: 321px;
+            height: 234px;
+        }
+        display: flex;
+       
+        .descripcion{
+        width: 500px;
+        margin-top: 5em;
+        margin-left: -14em;
+        }
+        ul{
+            margin-top: 5em;
+        }
+           
+            li{
+                display: flex;
+                flex-wrap: wrap;
+                list-style: none;
+                border: 0.5px solid rgb(167, 162, 162);
+               
+                margin-left: -75em;
+            }
+       
+            input{
+                width: 100px;
+                border: none;
+                background-color: rgb(25, 108, 218);
+                color: white;
+                border-radius: 1em;
+                &:hover{
+                    background-color: rgb(26, 121, 245);
+                }
+            }
+            .boton{
+               margin-left: -69em;
+               margin-top: 13em;
+            }
+    }
