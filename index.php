@@ -1,3 +1,15 @@
+<?phP include("cabecera.php");
+include("model/conexion.php");
+$sentencia = $bd->query("select catalogo.idCatalogo,Marca,Modelo,imagen,Cilindraje,Precio,Matricula,imagen,Descripcion,opciones_adicionales.idCatalogo,nombre2 
+from catalogo
+inner join opciones_adicionales 
+on catalogo.idCatalogo = opciones_adicionales.idCatalogo
+ORDER by catalogo.idCatalogo DESC
+LIMIT 4");
+
+$carros = $sentencia->fetchAll(PDO::FETCH_OBJ);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,43 +20,30 @@
   <title>Document</title>
 </head>
 <body>
-  <div class = "navbar">
-    <div class = "container"> 
-        <a href="index.html" class = "logo">AutoCar<span>Service</span></a>
-        <img class = "menu" id = "menu" src="imgProyecto/recurso 1.png"  alt="">
-      
-      <nav>
-        <img class = "exit" id = "exit" src="imgProyecto/exit.svg"  alt="">
-        <ul class = "primary-nav">
-          <li class = "inicio"><a href="index.html">Inicio</a></li>
-          <li><a href="">Sobre nosotros</a></li>
-          <li><a href="catalogo.html">Catalogo</a></li>
-          <li><a href="vendedores.html">Vendedores</a></li>
-          <li><a href="login.html">Iniciar Sesion</a></li>
-        </ul>
-      </nav>
-
-    </div>
-  </div>
   
-  <section class="hero">
+  
+  <section class="hero" >
     <div class = "container">
       <div class = "left-col">
         <h1>Has de tus sueños realidad <br> con nuestro increible catalogo</h1>
-        <p>Compra un vehiculo o cede uno ya usado
-         <br> disponible en todo colombia</p>
+        <div class = "d-section"> 
+          <p>Compra un vehiculo o cede uno ya usado
+        <br> disponible en todo colombia</p>
+        </div>
+       
+        
         <div class = "hero-cta">
            
          <ul class = "primerul">
-           <li class = "btn-registro"><a href="login.html">Registro</a></li>
+           <li class = "btn-registro"><a href="login.php">Registro</a></li>
            
          </ul>
          <ul class = "segundoul">
           <li class = "btn-detalles"><a href="" >Detalles</a></li>
         </ul>
 
-          <div >
-            <img class = "img-cuerpo"src="imgProyecto/imagenCuerpoFinal.png" alt="imgProyecto/Recurso 2.png">
+          <div class = "img-div">
+            <img class = "img-cuerpo"src="imgProyecto/imagenCuerpoFinal.png" alt="imgProyecto/Recurso 2.png" >
             
           </div>
         </div>
@@ -52,8 +51,8 @@
     </div>
   </section>
 
-  <section class = "contact-section">
-    <div class = "container">
+  
+    <div class = "contact-section">
       <div class = "contact-rigth">
         <ul class = "socialMedia-list">
           <li><img src="imgProyecto/FacebookLogo.png" alt=""></li>
@@ -62,7 +61,7 @@
         </ul>
       </div>
     </div>
-  </section>
+  
   <section class = "features-section">
     <div class = "features-container">
       <div class = "features-list-1">
@@ -99,7 +98,39 @@
       
     </div>
   </section>
- 
+  <div class ="title-text-section">
+
+  <a>Descubre nuestros mejores</a><br>  <a>vehiculos a nuestro mejor precio...</a>
+  </div>
+   
+  <div class = "flex-container">
+               <ul class ="lista">
+                 <?php
+                 foreach($carros as $carro ){
+
+                  
+                 ?>
+                   
+                
+                   <li>
+           <div class="card" style="width: 18rem;">
+  <img  src="imagenesSubidas/<?php echo $carro->imagen?>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><?php echo $carro->Marca."/".$carro->Modelo;?></h5>
+    <h6 class="card-title"><?php echo $carro->Cilindraje."cc";?></h6>
+    <h6 class="card-title"><?php echo "$".$carro->Precio;?></h6>
+    <h6 class="card-title"><?php echo $carro->Matricula;?></h6>
+    <a href="#" class="btn btn-primary">Ver publicaciones</a>
+  </div>
+</div>
+        </li>
+        
+                   <?php
+                 }
+                   ?>
+                   
+               </ul>
+          </div>
   <script>
    const mobile_btn = document.getElementById("menu")
        nav = document.querySelector("nav")
@@ -113,5 +144,6 @@
             nav.classList.remove("menu-btn");
         });
   </script>
+  
 </body>
 </html>

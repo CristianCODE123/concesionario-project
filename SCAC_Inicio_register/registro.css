@@ -1,0 +1,84 @@
+
+
+.formulario{
+    background-color:rgb(66, 124, 231);
+    padding:10px 10px;
+ 
+}
+
+#contenedor {
+    width:1000px ;
+    margin-left:450px;
+    margin-top:55px;
+    background-color: rgb(255, 255, 255);
+    border:3px solid #666;
+    padding:10px 0px 90px 0px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 22px;
+    
+
+}
+
+
+input{
+ position: relative;
+ left: 200px;
+}
+
+#nombre{
+    position: relative;
+    left: -15px;
+}
+
+#apellido{
+    position: relative;
+    left: -14px;
+}
+
+
+
+#correo{
+    position: relative;
+    left: -60px;
+}
+
+#confirmacion{
+    position: relative;
+    left: -142px;
+}
+
+#contraseña{
+    position: relative;
+    left: -28px;
+}
+
+#confircont{
+    position: relative;
+    left: -110px;
+}
+
+#fecha{
+    position: relative;
+    left: -103px;
+}
+
+
+#Sexo{
+    position: relative;
+    left: 190px;
+    bottom: 55px;
+}
+
+#gen{
+    position: relative;
+    left: -100px;
+    
+}
+
+#Boton{
+
+    position: relative;
+    left: 45px;
+    bottom: 55px;
+}

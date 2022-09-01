@@ -244,11 +244,30 @@ li {
   }
 }
 
+.form-div form {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  margin-left: 40%;
+  margin-top: 4em;
+}
+
+.form-div form select {
+  background-color: #6c757d;
+  color: white;
+}
+
+.form-div form select option {
+  color: white;
+}
+
 .options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 20%;
+  margin-left: 40%;
   margin-top: 5em;
 }
 
@@ -271,10 +290,16 @@ li {
   height: 234px;
 }
 
+.flex-container .contenido {
+  width: 750px;
+  height: 250px;
+}
+
 .flex-container .descripcion {
   width: 500px;
-  margin-top: 5em;
-  margin-left: -14em;
+  margin-top: 2em;
+  height: 70px;
+  position: absolute;
 }
 
 .flex-container ul {
@@ -305,7 +330,6 @@ li {
 }
 
 .flex-container .boton {
-  margin-left: -69em;
-  margin-top: 13em;
+  margin-top: 4em;
 }
 /*# sourceMappingURL=catalogo.css.map */

@@ -10,24 +10,9 @@
     <title>Document</title>
 </head>
 <body>
-  <div class = "navbar">
-    <div class = "container"> 
-        <a href="index.html" class = "logo">AutoCar<span>Service</span></a>
-        <img class = "menu" id = "menu" src="imgProyecto/recurso 1.png"  alt="">
-      
-      <nav>
-        <img class = "exit" id = "exit" src="imgProyecto/exit.svg"  alt="">
-        <ul class = "primary-nav">
-          <li class = "inicio"><a href="index.html">Inicio</a></li>
-          <li><a href="">Sobre nosotros</a></li>
-          <li><a href="catalogo.html">Catalogo</a></li>
-          <li><a href="vendedores.html">Vendedores</a></li>
-          <li><a href="login.html">Iniciar Sesion</a></li>
-        </ul>
-      </nav>
+<?php require_once("cabecera.php")
 
-    </div>
-  </div>
+?>
 
     <div id = "flex-container" class = "flex-container">
         <div class = "form-container">
@@ -98,12 +83,12 @@
 
 
             </div>
-            <form action="" id = "form-register">
-                <input class = "nombre" type="text" placeholder="Nombre" >
-                <input class ="nombre"type="text" placeholder="Apellido">
-                <input type="text" placeholder="Correo">
-                <input type="text" placeholder="Direccion">
-                <input type="password" placeholder="Contraseña">
+            <form  id = "form-register" method="post" action = "registrar.php">
+                <input class = "nombre" type="text" placeholder="Nombre" name = "txtNombre" required>
+                <input class ="nombre"type="text" placeholder="Apellido" name = "txtApellido" required>
+                <input type="text" placeholder="Correo" name = "txtCorreo" required>
+                <input type="text" placeholder="Direccion" name = "txtDireccion" required>
+                <input type="password" placeholder="Contraseña" name = "txtPassword" required>
                 <input type="date" >
                 
                 <div class ="check-section">
@@ -111,21 +96,31 @@
                     <input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">He leido y acepto las potilicas de privacidad y terminos de uso</label>
                 </div>
                 
-                <input type="button" value="Registrarse">
+                <input type="submit" value="Registrarse">
+                <div id = "faltanDatos"></div>
             </form>
+              <?php
+              if(isset($_GET['mensaje']) and $_GET["mensaje"] = "error"){
+              ?>
+              <script>
+                let formulario = document.getElementById("faltanDatos");
+                formulario.innerHTML = "";
+              </script>
 
-
-            <form action="" id = "form-login">
-              <input type="text" placeholder="Correo">
-              <input type="password" placeholder="Contraseña">
+              <?php
+              }
+              ?>
+            <form  id = "form-login" method = "post" action = "iniciarSesion.php">
+              <input type="text" placeholder="Correo" name = "txtCorreoLogin">
+              <input type="password" placeholder="Contraseña" name = "txtContraseñaLogin">
              <br>
               <input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">Recordarme</label> <br>
               <div class ="check-section">
-                <input type="button" value="Iniciar sesion">
+                <input type="submit" value="Iniciar sesion" name = "submit">
               
               </div>
               
-              <input class ="olvide" type="button" value="Olvide mi contraseña">
+              <input class ="olvide" type="submit" value="Olvide mi contraseña">
           </form>
         </div>
     
@@ -149,4 +144,8 @@
     <script src="login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-</html>
+</html> 
+
+<?php
+
+?>

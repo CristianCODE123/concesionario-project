@@ -1,0 +1,20 @@
+#formulario{
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    
+    right: 750px;
+    width: 400px;
+    margin-top: 200px;
+}
+
+body{
+    background-image: url("concesionaria.jpg");
+}
+
+#nombre{
+    -webkit-text-stroke: 3px rgb(0, 0, 0);
+    color: transparent;
+    letter-spacing: 10px;
+}

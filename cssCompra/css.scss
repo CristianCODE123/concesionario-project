@@ -1,0 +1,66 @@
+body{
+    background-color: rgb(239, 239, 239);
+}
+.card-seller{
+    
+    width: 610px;
+    position: absolute;
+    border: .6px solid gray;
+    margin-top: 40em;
+    margin-left: 28em;
+}
+.principal-container{
+    margin-left: 20em;
+    margin-top: 2em;
+    display: flex;
+    width: 1200px;
+    height: 1000px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 black;
+    .card{
+        margin-left: 2em;
+        margin-top: 2em;
+    }
+    
+    .especificaciones-container{
+        width: 350px;
+        height: 840px;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+        margin-left: 6.7em;
+        margin-top: 1em;
+        a{
+            margin-left: 1em;
+        }
+        .cont{
+            h3,a{
+                margin-left: 1em;
+                margin-top: 1em;
+            }
+            .descripcion{
+                margin-top: 1em;
+                margin-left: 0.9em;
+                width: 293px;
+                h3{
+                    margin-top: 1em;
+                    font-size: medium;
+                    margin-left: 1em;
+                }
+                
+            }
+        }
+        
+    }   
+    .img-container{
+        margin-left: 8em;
+        margin-top: 6em;
+        width: 600px;
+        height: 500px;
+        border: 1px solid black;
+    }
+}
+
+textArea{
+    resize: none;
+}

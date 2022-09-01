@@ -4,45 +4,27 @@ body {
   margin: 0;
 }
 
-.navbar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  padding: .1em;
-  background-color: white;
-  border: 0px solid #999;
-  -webkit-box-shadow: 1px 1px 3px #999;
-          box-shadow: 1px 1px 3px #999;
-  white-space: nowrap;
-}
-
-.navbar .logo {
-  padding: .4em;
-  text-decoration: none;
-  font-family: Roboto;
-  font-weight: bold;
-  font-size: 23px;
-  color: #196CDA;
-  color: #196cda;
-}
-
-.navbar .logo span {
-  color: black;
-}
-
-.navbar .container {
+.container {
   place-content: space-between;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.navbar .menu {
+.menu {
   padding: .5em;
   width: 23px;
   height: 23px;
   cursor: pointer;
+}
+
+.hero {
+  margin-left: -46em !important;
+}
+
+.img-div {
+  margin-left: 40em;
+  margin-top: -30em;
 }
 
 .left-col h1 {
@@ -63,6 +45,10 @@ body {
   color: #4D4D4D;
   color: #4d4d4d;
   text-align: center;
+}
+
+.left-col .d-section {
+  margin-left: -0.8em;
 }
 
 .btn-registro {
@@ -164,7 +150,30 @@ body {
   color: black;
 }
 
+.contact-section {
+  margin-top: 13em;
+  margin-left: 30em;
+}
+
 @media only screen and (max-width: 760px) {
+  .hero {
+    height: 800px;
+  }
+  .hero .container {
+    margin-left: 39em;
+    margin-top: -1em;
+  }
+  .contact-section {
+    margin-left: -37em;
+    margin-top: -10em;
+  }
+  h1 {
+    width: 500px;
+    margin-left: 1.9em;
+  }
+  .img-cuerpo {
+    display: none;
+  }
   .menu {
     margin-left: 50%;
   }
@@ -203,6 +212,15 @@ body {
 }
 
 @media only screen and (min-width: 760px) {
+  .hero {
+    height: 500px;
+  }
+  .hero .container {
+    margin-left: 45em;
+  }
+  .img-cuerpo {
+    display: none;
+  }
   .parrafo-logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -258,6 +276,15 @@ body {
 }
 
 @media only screen and (min-width: 1300px) {
+  .socialMedia-list {
+    margin-top: 5em;
+  }
+  .hero {
+    margin-left: -1em;
+  }
+  .img-cuerpo {
+    display: none;
+  }
   .logo {
     margin-left: 7em;
   }
@@ -267,13 +294,16 @@ body {
     display: flex;
     margin-left: 55em;
   }
+  .left-col {
+    margin-left: 15em;
+  }
   .left-col h1 {
     margin-top: 6em;
     text-align: left;
     margin-left: 9%;
   }
   .left-col p {
-    margin-top: -2em;
+    margin-top: 0.1em;
     text-align: left;
     margin-left: 10%;
   }
@@ -309,7 +339,7 @@ body {
     margin-left: 210px;
   }
   .left-col p {
-    margin-left: 220px;
+    margin-left: 235px;
   }
   .img-cuerpo {
     margin-top: -25em;
@@ -350,6 +380,7 @@ body {
 }
 
 .features-section h2 {
+  margin-left: -0.5em;
   padding: 1em 2em;
 }
 

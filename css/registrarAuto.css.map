@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EACA,KAAK,EAAE,KAAK;EACZ,UAAU,EAAE,GAAG,CAAC,GAAG,CAAC,IAAI,CAAC,OAAkB;EAC3C,OAAO,EAAE,GAAG;EACZ,MAAM,EAAE,KAAK;CAChB",
+    "sources": [
+        "registrarAuto.scss"
+    ],
+    "names": [],
+    "file": "registrarAuto.css"
+}
